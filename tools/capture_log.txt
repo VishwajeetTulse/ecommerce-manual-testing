@@ -1,0 +1,31 @@
+[1] Login page and negative login
+[2] Standard user happy path
+  standard_user price sort low->high: [7.99, 9.99, 15.99, 15.99, 29.99, 49.99] sorted: True
+  cart badge: 2
+  checkout accepted numeric first name / letters in postal code: True
+  Item total: $39.98 | Tax: $3.20 | Total: $43.18
+  after logout url: https://www.saucedemo.com/
+[3] Cart persists across logout (standard_user)
+  cart badge after re-login: 1
+[4] problem_user defects
+  distinct product image sources: 2
+  problem_user price sort low->high: [29.99, 9.99, 15.99, 49.99, 7.99, 15.99] sorted: False
+  problem_user badge after adding 2 items: none
+  problem_user last-name field value: ''
+[5] error_user and performance_glitch_user
+  error_user sort alert: Sorting is broken! This error has been reported to Backtrace.
+  performance_glitch_user login took 6.6 s
+[6] visual_user
+[7] Remaining checks for the test-case sheet
+  password field type: password
+  placeholders: Username / Password
+  direct /inventory.html when logged out: Epic sadface: You can only access '/inventory.html' when you are logged in.
+  name sort Z->A: True ['Test.allTheThings() T-Shirt (Red)', 'Sauce Labs Onesie']
+  badge after removing one item on cart page: 1
+  continue shopping -> https://www.saucedemo.com/inventory.html
+  first name only -> Error: Last Name is required
+  first+last name -> Error: Postal Code is required
+  cancel -> https://www.saucedemo.com/cart.html
+  footer: © 2026 Sauce Labs. All Rights Reserved.  | social links: 3
+  menu links: ['All Items', 'Dynamic Catalog', 'About', 'Logout', 'Reset App State']
+Done.

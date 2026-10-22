@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+~$*.xlsx
+report/*.aux
+report/*.log
+report/*.out
+report/*.toc
+report/*.lof
+report/*.lot
+report/*.synctex.gz
